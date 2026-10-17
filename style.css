@@ -1,0 +1,267 @@
+/* ===== TASTY BITES: WEBSITE DESIGN ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --dark: #1c1917;
+    --orange: #f97316;
+    --cream: #fff7ed;
+    --white: #ffffff;
+    --muted: #78716c;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navbar {
+    min-height: 76px;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px #0000000d;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .navbar nav a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  
+  .navbar nav a:hover {
+    color: var(--orange);
+  }
+  
+  .hero {
+    background: var(--cream);
+    min-height: 520px;
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+  }
+  
+  .hero-content {
+    max-width: 560px;
+  }
+  
+  .eyebrow {
+    color: var(--orange);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.7rem);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+  }
+  
+  .hero-content > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+    max-width: 420px;
+  }
+  
+  .button {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+  }
+  
+  .hero-image {
+    min-height: 350px;
+    border-radius: 20px;
+    background:
+      linear-gradient(135deg, #00000010, #00000030),
+      url("https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=1200&q=85")
+      center / cover;
+    box-shadow: 0 20px 45px #00000020;
+  }
+  
+  .section {
+    padding: 85px 8%;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  
+  .section-intro {
+    color: var(--muted);
+    margin-bottom: 38px;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 38px;
+    text-align: left;
+  }
+  
+  .food-card {
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid #e7e5e4;
+    background: var(--white);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  
+  .food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px #00000012;
+  }
+  
+  .food-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .jollof {
+    background-image: url("https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80");
+  }
+  
+  .fried {
+    background-image: url("https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80");
+  }
+  
+  .chicken {
+    background-image: url("https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80");
+  }
+  
+  .food-info {
+    padding: 22px;
+  }
+  
+  .food-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .food-info p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 15px;
+  }
+  
+  .food-info span {
+    color: var(--orange);
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+  
+  .about {
+    background: var(--cream);
+  }
+  
+  .about > p:last-child {
+    max-width: 650px;
+    margin: 15px auto 0;
+    color: var(--muted);
+  }
+  
+  .contact > p:not(.eyebrow) {
+    color: var(--muted);
+    margin: 12px 0 25px;
+  }
+  
+  footer {
+    background: var(--dark);
+    color: #d6d3d1;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+  }
+  
+  /* ===== MOBILE RESPONSIVENESS ===== */
+  
+  @media (max-width: 760px) {
+    .navbar {
+      padding: 16px 5%;
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .navbar nav {
+      justify-content: center;
+      gap: 16px;
+    }
+  
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 55px 6%;
+      gap: 30px;
+    }
+  
+    .hero h1 {
+      letter-spacing: -1px;
+    }
+  
+    .hero-image {
+      min-height: 260px;
+    }
+  
+    .section {
+      padding: 60px 6%;
+    }
+  
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .food-image {
+      height: 240px;
+    }
+  }
